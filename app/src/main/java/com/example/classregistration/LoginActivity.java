@@ -46,12 +46,9 @@ public class LoginActivity extends AppCompatActivity {
                         startActivity(intent);
                         finish();
                     } else {
-                        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                        startActivity(intent);
-                        finish();
-                       // AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
-                       // dialog = builder.setMessage("Login failed").setNegativeButton("Retry", null).create();
-                       // dialog.show();
+                        AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
+                        dialog = builder.setMessage("Login failed").setNegativeButton("Retry", null).create();
+                        dialog.show();
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();
