@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -15,7 +16,7 @@
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Account Registration"
+            android:text="Create your personal account"
             android:textAlignment="center"
             android:textColor="@android:color/background_light"
             android:textSize="20sp"
@@ -28,14 +29,28 @@
         android:layout_margin="40dp"
         android:orientation="vertical">
 
-        <EditText
-            android:id="@+id/editTextID"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:drawableStart="@drawable/ic_person_black_24dp"
-            android:ems="10"
-            android:hint="ID"
-            android:inputType="textPersonName" />
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/editTextID"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_person_black_24dp"
+                android:ems="10"
+                android:hint="ID"
+                android:inputType="textPersonName" />
+
+            <Button
+                android:id="@+id/buttonCheck"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="onClickCheck"
+                android:text="Check" />
+        </LinearLayout>
 
         <EditText
             android:id="@+id/editTextPassword"
@@ -48,7 +63,7 @@
             android:inputType="textPassword" />
 
         <EditText
-            android:id="@+id/editText"
+            android:id="@+id/editTextEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
@@ -91,6 +106,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="register" />
+            android:onClick="onClickRegister"
+            android:text="create an account" />
     </LinearLayout>
 </LinearLayout>

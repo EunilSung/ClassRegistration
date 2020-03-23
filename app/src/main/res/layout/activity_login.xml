@@ -16,9 +16,9 @@
 
         <ImageView
             android:id="@+id/imageView"
-            app:srcCompat="@drawable/class_registation_logo"
             android:layout_width="match_parent"
-            android:layout_height="150dp" />
+            android:layout_height="150dp"
+            app:srcCompat="@drawable/class_registation_logo" />
 
         <TextView
             android:id="@+id/textView"
@@ -60,6 +60,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
+            android:onClick="onClickLogin"
             android:text="login" />
 
         <TextView
@@ -67,10 +68,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
+            android:onClick="onClickRegister"
             android:text="SIGN UP"
             android:textAlignment="center"
-            android:textColor="@android:color/background_light"
-            android:onClick="onClickRegister"/>
+            android:textColor="@android:color/background_light" />
     </LinearLayout>
-
 </LinearLayout>
