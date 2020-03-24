@@ -1,14 +1,682 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/fragment_schedule"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ScheduleFragment">
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="100dp"
-        android:text="Course Schedule" />
+        android:background="@color/colorPrimary"
+        android:orientation="vertical">
+
+        <RadioGroup
+            android:id="@+id/radioGroupSemester"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:layout_marginRight="80dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radioButton1st"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="true"
+                android:text="1학기" />
+
+            <RadioButton
+                android:id="@+id/radioButton2nd"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="false"
+                android:text="2학기" />
+        </RadioGroup>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorPrimaryDark">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:text="MON"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:text="TUE"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:text="WED"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:text="THU"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:text="FRI"
+                    android:textAlignment="center" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorPrimaryDark">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="0"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/textViewMon0"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="@drawable/cell_schedule"
+                    android:text="MON"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/textViewTue0"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="@drawable/cell_schedule"
+                    android:text="TUE"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/textViewWed0"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="@drawable/cell_schedule"
+                    android:text="WED"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/textViewThu0"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="@drawable/cell_schedule"
+                    android:text="THU"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/textViewFri0"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="@drawable/cell_schedule"
+                    android:text="FRI"
+                    android:textAlignment="center" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorPrimaryDark">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="1"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/textViewMon1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="@drawable/cell_schedule"
+                    android:text="MON"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/textViewTue1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="@drawable/cell_schedule"
+                    android:text="TUE"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/textViewWed1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="@drawable/cell_schedule"
+                    android:text="WED"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/textViewThu1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="@drawable/cell_schedule"
+                    android:text="THU"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/textViewFri1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="@drawable/cell_schedule"
+                    android:text="FRI"
+                    android:textAlignment="center" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorPrimaryDark">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="2"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/textViewMon2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="@drawable/cell_schedule"
+                    android:text="MON"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/textViewTue2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="@drawable/cell_schedule"
+                    android:text="TUE"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/textViewWed2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="@drawable/cell_schedule"
+                    android:text="WED"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/textViewThu2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="@drawable/cell_schedule"
+                    android:text="THU"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/textViewFri2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="@drawable/cell_schedule"
+                    android:text="FRI"
+                    android:textAlignment="center" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorPrimaryDark">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="3"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/textViewMon3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="@drawable/cell_schedule"
+                    android:text="MON"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/textViewTue3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="@drawable/cell_schedule"
+                    android:text="TUE"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/textViewWed3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="@drawable/cell_schedule"
+                    android:text="WED"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/textViewThu3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="@drawable/cell_schedule"
+                    android:text="THU"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/textViewFri3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="@drawable/cell_schedule"
+                    android:text="FRI"
+                    android:textAlignment="center" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorPrimaryDark">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="4"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/textViewMon4"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="@drawable/cell_schedule"
+                    android:text="MON"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/textViewTue4"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="@drawable/cell_schedule"
+                    android:text="TUE"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/textViewWed4"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="@drawable/cell_schedule"
+                    android:text="WED"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/textViewThu4"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="@drawable/cell_schedule"
+                    android:text="THU"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/textViewFri4"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="@drawable/cell_schedule"
+                    android:text="FRI"
+                    android:textAlignment="center" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorPrimaryDark">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="5"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/textViewMon5"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="@drawable/cell_schedule"
+                    android:text="MON"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/textViewTue5"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="@drawable/cell_schedule"
+                    android:text="TUE"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/textViewWed5"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="@drawable/cell_schedule"
+                    android:text="WED"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/textViewThu5"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="@drawable/cell_schedule"
+                    android:text="THU"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/textViewFri5"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="@drawable/cell_schedule"
+                    android:text="FRI"
+                    android:textAlignment="center" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorPrimaryDark">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="6"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/textViewMon6"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="@drawable/cell_schedule"
+                    android:text="MON"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/textViewTue6"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="@drawable/cell_schedule"
+                    android:text="TUE"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/textViewWed6"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="@drawable/cell_schedule"
+                    android:text="WED"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/textViewThu6"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="@drawable/cell_schedule"
+                    android:text="THU"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/textViewFri6"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="@drawable/cell_schedule"
+                    android:text="FRI"
+                    android:textAlignment="center" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorPrimaryDark">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="7"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/textViewMon7"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="@drawable/cell_schedule"
+                    android:text="MON"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/textViewTue7"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="@drawable/cell_schedule"
+                    android:text="TUE"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/textViewWed7"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="@drawable/cell_schedule"
+                    android:text="WED"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/textViewThu7"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="@drawable/cell_schedule"
+                    android:text="THU"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/textViewFri7"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="@drawable/cell_schedule"
+                    android:text="FRI"
+                    android:textAlignment="center" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorPrimaryDark">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="8"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/textViewMon8"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="@drawable/cell_schedule"
+                    android:text="MON"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/textViewTue8"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="@drawable/cell_schedule"
+                    android:text="TUE"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/textViewWed8"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="@drawable/cell_schedule"
+                    android:text="WED"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/textViewThu8"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="@drawable/cell_schedule"
+                    android:text="THU"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/textViewFri8"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="@drawable/cell_schedule"
+                    android:text="FRI"
+                    android:textAlignment="center" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorPrimaryDark">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="9"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/textViewMon9"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="@drawable/cell_schedule"
+                    android:text="MON"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/textViewTue9"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="@drawable/cell_schedule"
+                    android:text="TUE"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/textViewWed9"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="@drawable/cell_schedule"
+                    android:text="WED"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/textViewThu9"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="@drawable/cell_schedule"
+                    android:text="THU"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/textViewFri9"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="@drawable/cell_schedule"
+                    android:text="FRI"
+                    android:textAlignment="center" />
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
 </FrameLayout>

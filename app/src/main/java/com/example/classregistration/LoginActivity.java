@@ -33,7 +33,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void onClickLogin(View v) {
-        String userID = editTextID.getText().toString();
+        final String userID = editTextID.getText().toString();
         String userPassword = editTextPassword.getText().toString();
         Response.Listener<String> responseListener = new Response.Listener<String>() {
             @Override
@@ -43,6 +43,7 @@ public class LoginActivity extends AppCompatActivity {
                     boolean isSuccess = jsonResponse.getBoolean("success");
                     if (isSuccess) {
                         Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                        intent.putExtra("userID", userID);
                         startActivity(intent);
                         finish();
                     } else {

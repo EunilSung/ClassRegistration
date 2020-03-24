@@ -72,6 +72,18 @@
                     android:textSize="20sp"
                     android:textStyle="bold" />
             </LinearLayout>
+
+            <ListView
+                android:id="@+id/listViewNotice"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@color/colorGray"
+                android:dividerHeight="1dp" />
         </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/layoutFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></RelativeLayout>
     </FrameLayout>
 </LinearLayout>
