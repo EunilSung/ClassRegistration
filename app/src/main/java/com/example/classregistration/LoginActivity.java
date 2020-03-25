@@ -61,6 +61,11 @@ public class LoginActivity extends AppCompatActivity {
         requestQueue.add(loginRequest);
     }
 
+
+    public void onClickInfo(View v){
+        startActivity(new Intent(this, InfoActivity.class));
+    }
+
     @Override
     protected void onStop() {
         super.onStop();
@@ -69,4 +74,5 @@ public class LoginActivity extends AppCompatActivity {
             dialog = null;
         }
     }
+
 }
