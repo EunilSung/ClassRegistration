@@ -15,11 +15,12 @@
 
 ><h4>1. we had plan to design structure of Android Studio code(java) and xml.</h4>
 ><h4>2. decision - List: able to search and get classes in this Activity.</h4>
-><h4>            - Schedual: albe to show what classes do you have and what time you have to get a class.</4>
+><h4>            - Schedual: albe to show what classes do you have and what time you have to get a class.</h4>
 ><h4>            - Stat: able to confirm your classes, also you can see competition rate of your classes. 
 ><h4>2. Added xmls and classes of Login and registration.</h4>
 
 <h4>2020.03.24. Working with all</h4>
+
 ><h4>1. added classes for list, schedual, stat and Database.</h4>
 ><h4>2. added php files for connection with DB and Android Studio.</h4>
 ><h4>3. allowed to connect Android Studio with internet to add code in manifast.</h4>
